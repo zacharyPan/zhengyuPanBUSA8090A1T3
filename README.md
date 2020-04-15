@@ -23,6 +23,7 @@ question1c_result.tab
 
 mysql.sh
 A1T3commandLine.txt
+question1_partd_ii.sql
 
 ## Question 2 Part a
 
