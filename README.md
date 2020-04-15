@@ -42,6 +42,7 @@ question2_partb_iii.sql
 
 mysql.sh
 A1T3commandLine.txt
+question2_partc_iii.sql
 
 ## Question 2 Part d
 
