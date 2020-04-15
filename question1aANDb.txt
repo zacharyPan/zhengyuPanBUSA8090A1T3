@@ -1,0 +1,11 @@
+Question1 part a
+mysql -u awkologist -p compbiol -e 'select * from expression where expr_value is not null;' >question1a.sql
+
+less question1a.sql > question1a.tab
+
+
+Question1 part b
+mysql -u awkologist -p compbiol -e 'select * from annotation where function is not null;' > question1b.sql
+
+less question1b.sql > question1b.tab
+
