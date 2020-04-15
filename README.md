@@ -36,6 +36,8 @@ question2_parta_iii.sql
 
 mysql.sh
 A1T3commandLine.txt
+question2_partb_iii.sql
+
 ## Question 2 Part c
 
 mysql.sh
