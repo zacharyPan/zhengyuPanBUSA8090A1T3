@@ -1,5 +1,48 @@
 # zhengyuPanBUSA8090A1T3
 
+# Problem and related file
+
+## Question1 part a
+
+question1a.tab
+A1T3commandLine.txt
+
+
+## Question1 part b
+
+question1b.tab
+A1T3commandLine.txt
+
+## Question 1 part c
+
+joinTwofile.sh
+A1T3commandLine.txt
+question1c_result.tab
+
+## Question 1 Part d
+
+mysql.sh
+A1T3commandLine.txt
+
+## Question 2 Part a
+
+mysql.sh
+A1T3commandLine.txt
+
+
+## Question 2 Part b
+
+mysql.sh
+A1T3commandLine.txt
+## Question 2 Part c
+
+mysql.sh
+A1T3commandLine.txt
+
+## Question 2 Part d
+
+mysql.sh
+A1T3commandLine.txt
 
 Reference:
 
