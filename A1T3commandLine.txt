@@ -1,0 +1,81 @@
+Question1 part a
+mysql -u awkologist -p compbiol -e 'select * from expression where expr_value is not null;' >question1a.sql
+
+less question1a.sql > question1a.tab
+
+vi question1a.tab
+
+
+
+
+Question1 part b
+mysql -u awkologist -p compbiol -e 'select * from annotation where function is not null;' > question1b.sql
+
+less question1b.sql > question1b.tab
+
+vi question1b.tab
+
+
+
+
+Question 1 part c
+
+./joinTwofile.sh
+Or 
+./joinTwofile.sh > question1c_result.tab
+
+
+
+Question 1 Part d
+
+I put all mysql code in one mysql.sh file, either run all mysql together 
+
+./mysql.sh
+Or 
+mysql -u awkologist -p compbiol -e 'select distinct a1.metabolism from annotation a1 INNER Join annotation a2 on\
+a1.metabolism = a2.metabolism where a1.gene <>a2.gene;'
+
+
+
+Question 2 Part a
+
+I put all mysql code in one mysql.sh file, either run all mysql together 
+
+./mysql.sh
+Or 
+
+mysql -u awkologist -p compbiol -e 'select \
+	m.LastName, m.FirstName from Member m where m.Coach is null;'
+
+
+Question 2 Part b
+
+I put all mysql code in one mysql.sh file, either run all mysql together 
+
+./mysql.sh
+Or 
+mysql -u awkologist -p compbiol -e 'select m.LastName, m.FirstName from Member m where JoinDate LIKE "%2010%";'
+
+
+Question 2 Part c
+
+I put all mysql code in one mysql.sh file, either run all mysql together 
+
+./mysql.sh
+Or 
+mysql -u awkologist -p compbiol -e 'select distinct m.LastName, m.FirstName, m.MemberID from Member m inner join Entry e on e.MemberID = m.MemberID where not exists(select * from Entry e where e.MemberID = m.MemberID and e.Year = 2014);'
+
+
+Question 2 Part d
+
+I put all mysql code in one mysql.sh file, either run all mysql together 
+
+./mysql.sh
+Or 
+ mysql -u awkologist -p compbiol -e 'select m.LastName, m.FirstName, m.MemberID\
+from Member m where not exists\
+(select * from Entry e1 where not exists\
+(select * from Entry e2 where e2.MemberID = m.MemberID and \
+e1.Year = e2.Year));'
+
+
