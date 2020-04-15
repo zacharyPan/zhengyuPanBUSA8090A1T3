@@ -26,7 +26,7 @@ Or
 
 
 
-Question 1 Part d
+Question 1 Part d ii
 
 I put all mysql code in one mysql.sh file, either run all mysql together 
 
@@ -34,10 +34,11 @@ I put all mysql code in one mysql.sh file, either run all mysql together
 Or 
 mysql -u awkologist -p compbiol -e 'select distinct a1.metabolism from annotation a1 INNER Join annotation a2 on\
 a1.metabolism = a2.metabolism where a1.gene <>a2.gene;'
+Or
+mysql -p -u awkologist compbiol < question1_partd_ii.sql
 
 
-
-Question 2 Part a
+Question 2 Part a iii
 
 I put all mysql code in one mysql.sh file, either run all mysql together 
 
@@ -46,6 +47,9 @@ Or
 
 mysql -u awkologist -p compbiol -e 'select \
 	m.LastName, m.FirstName from Member m where m.Coach is null;'
+	
+Or 
+mysql -p -u awkologist compbiol < question2_parta_iii.sql
 
 
 Question 2 Part b
@@ -55,7 +59,8 @@ I put all mysql code in one mysql.sh file, either run all mysql together
 ./mysql.sh
 Or 
 mysql -u awkologist -p compbiol -e 'select m.LastName, m.FirstName from Member m where JoinDate LIKE "%2010%";'
-
+Or
+mysql -p -u awkologist compbiol < question2_partb_iii.sql
 
 Question 2 Part c
 
@@ -64,9 +69,10 @@ I put all mysql code in one mysql.sh file, either run all mysql together
 ./mysql.sh
 Or 
 mysql -u awkologist -p compbiol -e 'select distinct m.LastName, m.FirstName, m.MemberID from Member m inner join Entry e on e.MemberID = m.MemberID where not exists(select * from Entry e where e.MemberID = m.MemberID and e.Year = 2014);'
+Or 
+mysql -p -u awkologist compbiol < question2_partc_iii.sql
 
-
-Question 2 Part d
+Question 2 Part d 
 
 I put all mysql code in one mysql.sh file, either run all mysql together 
 
@@ -77,5 +83,6 @@ from Member m where not exists\
 (select * from Entry e1 where not exists\
 (select * from Entry e2 where e2.MemberID = m.MemberID and \
 e1.Year = e2.Year));'
-
+Or
+mysql -p -u awkologist compbiol < question2_partd_ii.sql
 
